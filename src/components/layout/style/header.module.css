@@ -1,0 +1,25 @@
+.header{
+    width: 100%;
+    background-color: var(--primary);
+    height: 106px;
+    position: relative;
+}
+
+.header img{
+    position: absolute;
+    max-height: 70px;
+    width: auto;
+    top: 4px;
+}
+
+@media (min-width: 480px) {
+    .header img{
+        max-height: 106px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header img{
+        max-height: 127px;
+    }
+}
