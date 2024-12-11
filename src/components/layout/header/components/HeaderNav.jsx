@@ -27,9 +27,9 @@ const navList =[
 ]
 
 const HeaderNav = ()=>{
-    return <>
+    return <div className='hidden md:flex'>
         {navList?.map((nav,index)=><NavLink key={index} title={nav.title} href={nav.link} dropdown={nav?.dropdown} />)}
-    </>
+    </div>
 }
 
 export default HeaderNav;

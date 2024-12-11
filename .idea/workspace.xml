@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db82c08d-725a-4f1f-b0ca-0c7002a3288d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/components/Booking.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/components/HeaderNav.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/components/MenuDropdown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/components/NavLink.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/components/PromotionDropdown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="db82c08d-725a-4f1f-b0ca-0c7002a3288d" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/style/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/style/header.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lautom/Documents/Freelance/MeetPlus/fe/src/components/layout",
+    "last_opened_file_path": "C:/Users/Lautom/Downloads/drive-download-20241211T161436Z-001/meetplusbe",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -87,11 +75,26 @@
       <option name="presentableId" value="Default" />
       <updated>1733756360379</updated>
       <workItem from="1733756364897" duration="7207000" />
-      <workItem from="1733835725492" duration="10148000" />
+      <workItem from="1733835725492" duration="10575000" />
+      <workItem from="1733934331166" duration="615000" />
+      <workItem from="1733935217536" duration="89000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1733850626165</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733850626165</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

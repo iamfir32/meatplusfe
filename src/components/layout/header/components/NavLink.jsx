@@ -6,7 +6,7 @@ const NavLink = async ({href,title,dropdown})=>{
     const headerList = await headers();
     const pathname = headerList.get("x-current-path");
 
-    const isActive = pathname === href || pathname.startsWith(href) && href !== "/";
+    const isActive = pathname === href || pathname?.startsWith(href) && href !== "/";
 
     return (
         <Link

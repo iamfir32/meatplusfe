@@ -4,6 +4,7 @@ import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/Footer";
 import ContactNow from "@/components/layout/ContactNow";
 import Body from "@/components/layout/Body";
+import Provider from "@/components/Provider";
 
 const geistMyriadPro = localFont({
   src: "../../public/fonts/myriadPro/MyriadPro-BoldCondIt.otf",
@@ -40,12 +41,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistRoboto.variable} ${geistMyriadPro.variable} min-h-[100vh] w-full flex flex-col`}
       >
-        <Header/>
-        <Body>
-            {children}
-        </Body>
-        <Footer/>
-        <ContactNow></ContactNow>
+          <Provider>
+              <Header/>
+              <Body>
+                  {children}
+              </Body>
+              <Footer/>
+              <ContactNow></ContactNow>
+          </Provider>
       </body>
     </html>
   );
