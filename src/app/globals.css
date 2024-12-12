@@ -4,6 +4,7 @@
 
 :root {
   --primary:#AC1E21;
+  --yellow:#f9e20a;
   --breakpoint-xs: 480px;
   --breakpoint-sm: 768px;
   --breakpoint-md: 1024px;

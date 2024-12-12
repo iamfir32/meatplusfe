@@ -34,7 +34,7 @@
 }
 
 .navLink:hover{
-    color: #f9e20a;
+    color:var(--yellow);
 }
 
 .navLink:first-child{
@@ -42,7 +42,7 @@
 }
 
 .activeNavLink{
-    color: #f9e20a;
+    color:var(--yellow);
 }
 
 @media (min-width: 480px) {
