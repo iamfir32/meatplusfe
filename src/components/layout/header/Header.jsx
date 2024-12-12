@@ -3,9 +3,13 @@ import Image from "next/image"
 import classes from "@/components/layout/header/style/header.module.css"
 import HeaderNav from "@/components/layout/header/components/HeaderNav";
 import Booking from "@/components/layout/header/components/Booking";
+import {headers} from "next/headers";
+import CmsRouteList from "@/utils/cmsRouteList";
+const Header =async ()=>{
+    const headerList = await headers();
+    const pathname = headerList.get("x-current-path");
 
-const Header =()=>{
-    return <header className={classes.header}>
+    return <header className={classes.header} style={CmsRouteList.some(x=>pathname?.startsWith(x))?{display:'none'}:{}}>
         <div className={classes.container}>
             <div>
                 <Image src={Logo.src} width={600} height={600} alt='logo'></Image>
