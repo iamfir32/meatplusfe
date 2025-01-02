@@ -2,6 +2,10 @@
     display: flex !important;
 }
 
+img{
+    width: 100%;
+}
+
 .ant-carousel .slick-dots li{
     width: 6px;
     height: 6px;

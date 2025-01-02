@@ -1,7 +1,7 @@
 .header{
     width: 100%;
     background-color: var(--primary);
-    height: auto;
+    height: 70px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -20,7 +20,6 @@
     position: absolute;
     max-height: 70px;
     width: auto;
-    top: 4px;
 }
 
 .navLink{
@@ -49,6 +48,7 @@
     .header img{
         max-height: 106px;
         position: relative;
+        top: 4px;
     }
     .header{
         height: 106px;

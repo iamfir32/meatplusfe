@@ -4,6 +4,7 @@ import Image3 from "@/assets/images/banner3.jpg"
 
 import Image from "next/image";
 import Slider from "@/components/fe/common/slider/Slider";
+import Social from "@/components/fe/home/Social";
 
 export default function Home() {
   const items=[
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <div className="">
       <Slider items={items}></Slider>
+        <Social></Social>
     </div>
   );
 }

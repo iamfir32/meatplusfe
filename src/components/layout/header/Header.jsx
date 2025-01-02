@@ -5,6 +5,7 @@ import HeaderNav from "@/components/layout/header/components/HeaderNav";
 import Booking from "@/components/layout/header/components/Booking";
 import {headers} from "next/headers";
 import CmsRouteList from "@/utils/cmsRouteList";
+import MenuDrawer from "@/components/layout/header/components/MenuDrawer";
 const Header =async ()=>{
     const headerList = await headers();
     const pathname = headerList.get("x-current-path");
@@ -18,7 +19,12 @@ const Header =async ()=>{
 
             <div className='flex items-center flex-wrap justify-end '>
                 <HeaderNav></HeaderNav>
-                <Booking></Booking>
+
+                <div className={'flex gap-[30px] items-center'}>
+                    <Booking></Booking>
+
+                    <MenuDrawer></MenuDrawer>
+                </div>
             </div>
         </div>
     </header>
