@@ -29,7 +29,7 @@ const SelectField = ({ name, label, options, placeholder = "Select an option", .
                 {...rest}
             >
                 {options.map((option) => (
-                    <Option key={option.value} value={option.value} disabled={option?.disabled}>
+                    <Option key={option.value} value={option.value}>
                         {option.label}
                     </Option>
                 ))}
