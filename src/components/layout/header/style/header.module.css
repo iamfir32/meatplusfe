@@ -20,6 +20,7 @@
     position: absolute;
     max-height: 70px;
     width: auto;
+    transition: all .3s ease-in-out;
 }
 
 .navLink{
@@ -49,6 +50,7 @@
         max-height: 106px;
         position: relative;
         top: 4px;
+        z-index: 10;
     }
     .header{
         height: 106px;
