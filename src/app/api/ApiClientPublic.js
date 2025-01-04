@@ -1,21 +1,10 @@
-import { getSession } from 'next-auth/react';
-
-export default async function fetchData(url, method = 'GET', body = null) {
+export default async function fetchDataWithoutAuth(url, method = 'GET', body = null) {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    const session = await getSession();
     const baseUrl = apiUrl;
 
-    if (!session || !session.user?.token) {
-        throw new Error('Unauthorized');
-    }
+    const headers = {};
 
-    const headers = {
-        'Authorization': `Bearer ${session.user.token}`,
-    };
-
-    if (body instanceof FormData) {
-        delete headers['Content-Type'];
-    } else {
+    if (!(body instanceof FormData)) {
         headers['Content-Type'] = 'application/json';
     }
 
