@@ -1,21 +1,16 @@
-import Image1 from "@/assets/images/banner1.jpg"
-import Image2 from "@/assets/images/banner2.jpg"
-import Image3 from "@/assets/images/banner3.jpg"
-
-import Image from "next/image";
-import Slider from "@/components/fe/common/slider/Slider";
-import Social from "@/components/fe/home/Social";
+import Social from "@/components/fe/home/social/Social";
+import MeatPromotion from "@/components/fe/home/meetPromo/MeatPromotion";
+import SectionWrapper from "@/components/fe/home/section/SectionWrapper";
+import HeroBanner from "@/components/fe/home/heroBanner/HeroBanner";
 
 export default function Home() {
-  const items=[
-      <Image key={1} src={Image1} alt={"banner1"}></Image>,
-    <Image key={2} src={Image2} alt={"banner2"}></Image>,
-      <Image key={3} src={Image3} alt={"banner3"}></Image>
-  ]
+
   return (
     <div className="">
-      <Slider items={items}></Slider>
+        <HeroBanner></HeroBanner>
         <Social></Social>
+        <MeatPromotion></MeatPromotion>
+        <SectionWrapper></SectionWrapper>
     </div>
   );
 }
