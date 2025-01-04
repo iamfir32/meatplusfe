@@ -11,27 +11,27 @@ import TextInput from "@/components/formikInput/TextInput";
 import Image from "next/image";
 import {getImageLink} from "@/utils/common";
 
-const CreateBannerModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) => {
-    const [api, contextHolder] = notification.useNotification();
-
+const EditBannerModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,setSelectedBanner }) => {
     const [position,setPosition] = useState([]);
     const [isLoading,setIsLoading] = useState(false);
+    const [api, contextHolder] = notification.useNotification();
     const openNotificationWithIcon = (type, title, content) => {
         api[type]({
             message: title,
             description:content,
             placement:'bottomRight'
+
         });
     };
     const handleOk = async (values) => {
-        createBanner(values).then();
+        editBanner(values).then();
     };
 
-    const createBanner = async(values)=>{
+    const editBanner = async(values)=>{
         try{
             setIsLoading(true);
-            const res=await manageBannerApi.createBanner(values);
-            openNotificationWithIcon("success","Thông báo","Thêm Banner thành công");
+            const res=await manageBannerApi.editBanner(values);
+            openNotificationWithIcon("success","Thông báo","Sửa Banner thành công");
             refresh();
             handleCancel();
         }
@@ -43,6 +43,7 @@ const CreateBannerModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) 
     }
     const handleCancel = () => {
         setIsShowCreateModal(false);
+        setSelectedBanner(null)
         if (resetFormRef.current) {
             resetFormRef.current();
         }
@@ -68,7 +69,7 @@ const CreateBannerModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) 
     const resetFormRef = useRef(null);
     return (
         <Modal
-            title="Thêm Banner"
+            title="Sửa Banner"
             open={isShowCreateModal}
             onOk={handleOk}
             onCancel={handleCancel}
@@ -77,10 +78,10 @@ const CreateBannerModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) 
             {contextHolder}
             <Spin spinning={isLoading}>
                 <Formik
-                    initialValues={{ imageUrl: null, position:"",description:"" }}
+                    initialValues={{id:data?.id, imageUrl: data?.imageUrl||"", position:data?.position||"",description:data?.description||""}}
                     validationSchema={validationSchema}
                     onSubmit={(values, { resetForm }) => {
-                        handleOk(values);
+                        handleOk(values).then();
                     }}
                 >
                     {({ values,handleSubmit,setFieldValue,errors, touched,resetForm }) => {
@@ -111,7 +112,7 @@ const CreateBannerModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) 
                                         Hủy bỏ
                                     </Button>
                                     <Button type="primary" htmlType="submit" onClick={handleSubmit}>
-                                        Thêm
+                                        Lưu
                                     </Button>
                                 </div>
                             </Form>
@@ -123,4 +124,4 @@ const CreateBannerModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) 
     );
 };
 
-export default CreateBannerModal;
+export default EditBannerModal;
