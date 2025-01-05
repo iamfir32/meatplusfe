@@ -5,39 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db82c08d-725a-4f1f-b0ca-0c7002a3288d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/app/api/cms/manageSectionApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/fe/sectionApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/instagramIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/ytbIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/heroBanner/HeroBanner.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/meetPromo/ImagePromo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/meetPromo/ImagePromo.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/meetPromo/MeatPromotion.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/meetPromo/MeetPromotion.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/Introduction.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/Introduction.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionSingle.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/ImagePicker.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/SelectInput.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/TextInputNormal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/style/imagePicker.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/manageImage/ImageItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/manageImage/ManageImage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/manageImage/ManageImage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/sectionAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/Location.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/cms/manageBannerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/cms/manageBannerApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cms/manageBanner/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cms/manageBanner/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cms/manageSection/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cms/manageSection/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/Social.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/social/Social.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/social.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/social/social.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formikInput/SelectInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formikInput/SelectInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formikInput/TextInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formikInput/TextInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/style/menuDrawer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/style/menuDrawer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scripts/headerScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/headerScroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/fe/bannerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fe/bannerApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cms/LayoutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cms/LayoutPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/common/slider/Slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/common/slider/Slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/Introduction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/Introduction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionSingle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionSingle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="staging" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,7 +81,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lautom/Documents/Freelance/MPv2/meatplusfe/src/app/api/fe",
+    "last_opened_file_path": "C:/Users/Lautom/Documents/Freelance/MPv2/meatplusfe/src/components/fe/home/section",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -115,11 +95,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\fe\home\section" />
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\public\scripts" />
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\api\fe" />
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\api" />
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\api\cms" />
-      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components" />
-      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\cms\manageSection" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\fe\home\social" />
