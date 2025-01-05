@@ -1,5 +1,3 @@
-console.log(321321321321)
-
 const header = document.querySelector('header');
 const paddingHeader = document.querySelector('.padding-header');
 const headerImg = document.querySelector('.headerImg');
