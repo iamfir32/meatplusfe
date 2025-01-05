@@ -3,8 +3,8 @@ import Image from "next/image";
 import classes from "./SectionWrapper.module.css"
 import {getImageLink} from "@/utils/common";
 
-const SectionSingle = ({title,item})=>{
-    return <div className={classes.sectionContainer}>
+const SectionSingle = ({title,item, data})=>{
+    return <div className={`${classes.sectionContainer} homeSection ${data?.appearTransition}`}>
         <p className={'promo-title'}>{title}</p>
         <div className={"w-full"}>
             {item?.link?<Link className={classes.sectionItem} href={item?.link}>

@@ -1,5 +1,5 @@
 const LayoutPage = ({children})=>{
-    return <div  className="w-full  min-h-[100vh] p-[14px] bg-white">
+    return <div  className="w-full h-[100vh] overflow-y-auto p-[14px] bg-white">
         {children}
     </div>
 }

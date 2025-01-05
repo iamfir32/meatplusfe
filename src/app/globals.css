@@ -73,6 +73,36 @@ body {
 .big_logo{
   max-height: 140px !important;
 }
+
+.homeSection{
+  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-backface-visibility: hidden;
+  transition: filter 1.3s, transform 1.6s, opacity .7s ease-in;
+  will-change: filter, transform, opacity;
+}
+.homeSection.LEFT_TO_RIGHT{
+  transform: translate3d(-70px, 0, 0);
+}
+
+.homeSection.RIGHT_TO_LEFT{
+  transform: translate3d(70px, 0, 0);
+}
+
+.homeSection.BOTTOM_TO_TOP{
+  transform: translate3d(0, 70px, 0);
+}
+
+.homeSection.TOP_TO_BOTTOM{
+  transform: translate3d(0, -70px, 0);
+}
+
+.homeSection.APPEAR {
+  animation-delay: .1s;
+  opacity: 1 !important;
+  transform: translateZ(0) scale(1);
+}
+
 @keyframes stuckMoveDown {
   0%{
     transform: translateY(-100%);
