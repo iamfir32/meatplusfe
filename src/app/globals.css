@@ -103,6 +103,9 @@ body {
   transform: translateZ(0) scale(1);
 }
 
+.location .slick-list {margin: 0 -5px;}
+.location .slick-slide>div {padding: 0 5px;}
+
 @keyframes stuckMoveDown {
   0%{
     transform: translateY(-100%);
