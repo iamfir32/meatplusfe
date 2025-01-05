@@ -29,7 +29,7 @@ const Location =async ()=>{
             className={"w-full h-[200px] object-cover"}
         />
     ));
-    return <div className={`w-full homeSection BOTTOM_TO_TOP`}>
+    return <div className={`w-full location homeSection BOTTOM_TO_TOP`}>
         <Slider items={items} options={{
             speed: 500,
             slidesToShow: 4,

@@ -96,18 +96,15 @@ body {
 .homeSection.TOP_TO_BOTTOM{
   transform: translate3d(0, -70px, 0);
 }
-.slick-slide {
-  margin: 0 27px;
-}
 
-.slick-list {
-  margin: 0 -27px;
-}
 .homeSection.APPEAR {
   animation-delay: .1s;
   opacity: 1 !important;
   transform: translateZ(0) scale(1);
 }
+
+.location .slick-list {margin: 0 -5px;}
+.location .slick-slide>div {padding: 0 5px;}
 
 @keyframes stuckMoveDown {
   0%{
