@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db82c08d-725a-4f1f-b0ca-0c7002a3288d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/public/scripts/sectionAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fe/home/section/Location.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/headerScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/headerScroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/fe/bannerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fe/bannerApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cms/LayoutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cms/LayoutPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/common/slider/Slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/common/slider/Slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/Introduction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/Introduction.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionSingle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionSingle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/Location.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/Location.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +30,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/feat1" />
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -72,27 +64,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.Social.jsx.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lautom/Documents/Freelance/MPv2/meatplusfe/src/components/fe/home/section",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "consents",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.Social.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lautom/Documents/Freelance/MPv2/meatplusfe/src/components/fe/home/section&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;consents&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\fe\home\section" />

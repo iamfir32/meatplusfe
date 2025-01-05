@@ -26,7 +26,7 @@ const Location =async ()=>{
             width={270}
             height={200}
             objectFit={'cover'}
-            className={"w-[270px] h-[200px] object-cover"}
+            className={"w-full h-[200px] object-cover"}
         />
     ));
     return <div className={`w-full homeSection BOTTOM_TO_TOP`}>

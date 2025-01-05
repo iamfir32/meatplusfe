@@ -96,7 +96,13 @@ body {
 .homeSection.TOP_TO_BOTTOM{
   transform: translate3d(0, -70px, 0);
 }
+.slick-slide {
+  margin: 0 27px;
+}
 
+.slick-list {
+  margin: 0 -27px;
+}
 .homeSection.APPEAR {
   animation-delay: .1s;
   opacity: 1 !important;
