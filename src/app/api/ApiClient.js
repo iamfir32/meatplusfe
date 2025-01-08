@@ -10,7 +10,7 @@ export default async function fetchData(url, method = 'GET', body = null) {
     }
 
     const headers = {
-        'Authorization': `Bearer ${session.user.token}`,
+        'Authorization': `Bearer ${session.user.accessToken}`,
     };
 
     if (body instanceof FormData) {

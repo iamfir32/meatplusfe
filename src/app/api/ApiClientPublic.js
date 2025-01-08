@@ -1,5 +1,5 @@
 export default async function fetchDataWithoutAuth(url, method = 'GET', body = null) {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL_PUBLIC;
     const baseUrl = apiUrl;
 
     const headers = {};
@@ -22,7 +22,7 @@ export default async function fetchDataWithoutAuth(url, method = 'GET', body = n
         }
     }
 
-    const response = await fetch(baseUrl + url, options);
+    const response = await fetch(baseUrl + url+"?origin=meatplussynckiovn.synck.io.vn", options);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`);

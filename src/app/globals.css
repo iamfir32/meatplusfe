@@ -106,6 +106,14 @@ body {
 .location .slick-list {margin: 0 -5px;}
 .location .slick-slide>div {padding: 0 5px;}
 
+.dropdown{
+  transition: all .3s ease-in-out;
+}
+
+.headerNav:hover .dropdown{
+  opacity: 1;
+}
+
 @keyframes stuckMoveDown {
   0%{
     transform: translateY(-100%);

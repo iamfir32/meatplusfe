@@ -1,0 +1,11 @@
+.otherNewsTitle{
+    width: calc(100% - 55px);
+}
+
+.latestNews{
+    padding: 15px 0;
+}
+
+.latestNews:not(:last-child){
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}

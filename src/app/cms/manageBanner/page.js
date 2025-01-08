@@ -15,7 +15,7 @@ import EditBannerModal from "@/app/cms/manageBanner/components/EditBannerModal";
 
 const breadScrum = [
     {
-        title:'Quản lý hệ thống'
+        title:'Quản lý trang chủ'
     },
     {
         title:'Quản lý Banner'

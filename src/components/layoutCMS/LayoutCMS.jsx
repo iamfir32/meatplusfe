@@ -6,7 +6,7 @@ import {PiFlagBannerFill} from "react-icons/pi";
 import {BsFillInfoCircleFill, BsMenuButtonWideFill} from "react-icons/bs";
 import {MdDiscount, MdOutlineMenuBook} from "react-icons/md";
 import {IoLocationSharp, IoLogOut} from "react-icons/io5";
-import {FaNewspaper} from "react-icons/fa";
+import {FaHome, FaNewspaper} from "react-icons/fa";
 import {VscFeedback} from "react-icons/vsc";
 import {signOut, useSession} from "next-auth/react";
 import {useRouter, usePathname} from "next/navigation";
@@ -15,16 +15,23 @@ const {  Content, Sider } = Layout;
 
 const items = [
     {
-        key:"manageBanner",
-        label:"Quản lý Banner",
-        icon:<PiFlagBannerFill />,
-        route:"/cms/manageBanner"
-    },
-    {
-        key:"manageSection",
-        label:"Quản lý Section",
-        icon:<BsMenuButtonWideFill />,
-        route:"/cms/manageSection"
+        key: 'home',
+        label: 'Quản lý trang chủ',
+        icon:  <FaHome />,
+        children:[
+            {
+                key:"manageBanner",
+                label:"Quản lý Banner",
+                icon:<PiFlagBannerFill />,
+                route:"/cms/manageBanner"
+            },
+            {
+                key:"manageSection",
+                label:"Quản lý Section",
+                icon:<BsMenuButtonWideFill />,
+                route:"/cms/manageSection"
+            },
+        ]
     },
     {
         key:"manageMenu",
@@ -86,9 +93,20 @@ const LayoutCMS = ({children}) => {
                 }}
             >
                 <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                    <Menu theme="dark" defaultSelectedKeys={[items.find(x=>x.route===pathname)?items.find(x=>x.route===pathname).key:items[0].key]} mode="inline" items={items} onSelect={({ item })=>{
-                        router.push(item?.props?.route)
-                    }} />
+                    <Menu
+                        theme="dark"
+                        defaultSelectedKeys={[items.find(x => {
+                            return x.children?.some(child => child.route === pathname) || x.route === pathname;
+                        }) ? items.find(x => {
+                            return x.children?.some(child => child.route === pathname) || x.route === pathname;
+                        }).key : items[0].key]}
+                        mode="inline"
+                        items={items}
+                        onSelect={({ item }) => {
+                            router.push(item?.props?.route);
+                        }}
+                    />
+
                 </Sider>
                 <Layout>
                     <Content>

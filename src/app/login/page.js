@@ -65,7 +65,7 @@ export default function Login() {
                                 username: Yup.string()
                                     .required("Vui lòng nhập tên đăng nhập"),
                                 password: Yup.string()
-                                    .min(6, "Mật khẩu ít nhất 6 ký tự")
+                                    // .min(6, "Mật khẩu ít nhất 6 ký tự")
                                     .required("Vui lòng nhập mật khẩu"),
                             })}
                             onSubmit={(values, { setSubmitting }) => {
