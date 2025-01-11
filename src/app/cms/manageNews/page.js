@@ -161,7 +161,7 @@ export default function Login() {
             }} setSelectedBanner={setSelectedBanner}
             ></EditBannerModal>}
 
-            <HeaderPage title={"Quản lý Banner"} breadScrum={breadScrum} action={headerAction}></HeaderPage>
+            <HeaderPage title={"Quản lý tin tức"} breadScrum={breadScrum} action={headerAction}></HeaderPage>
             <Spin spinning={isLoading} className={'mt-[20px]'}>
                 <Table columns={columns} dataSource={banners} rowSelection={rowSelection} rowKey={'id'}></Table>
             </Spin>

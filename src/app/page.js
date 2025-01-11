@@ -10,7 +10,7 @@ export default function Home() {
         <HeroBanner></HeroBanner>
         <Social></Social>
         <MeatPromotion></MeatPromotion>
-        <SectionWrapper></SectionWrapper>
+        {/*<SectionWrapper></SectionWrapper>*/}
     </div>
   );
 }

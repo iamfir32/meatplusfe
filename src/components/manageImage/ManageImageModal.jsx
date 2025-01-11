@@ -59,10 +59,6 @@ const ManageImage =({onChooseImage,isModalOpen,setIsModalOpen})=>{
             setIsLoading(false)
         }
     }
-
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
     const handleOk = () => {
         if(onChooseImage){
             onChooseImage(selectedImage);

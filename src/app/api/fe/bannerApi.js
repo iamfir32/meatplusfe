@@ -1,13 +1,13 @@
 import ApiClientPublic from "../ApiClientPublic";
 const ManageBannerApi ={
     getHeroBanner: async ()=>{
-        return ApiClientPublic("/api/fe/banner/getBannerByType?position=HEROBANNER","GET");
+        return ApiClientPublic("banners?position=HEROBANNER","GET");
     },
     getPromotionBanner: async ()=>{
-        return ApiClientPublic("/api/fe/banner/getBannerByType?position=PRODUCTSHOWCASE","GET");
+        return ApiClientPublic("banners?position=PRODUCTSHOWCASE","GET");
     },
     getLocationBanner: async ()=>{
-        return ApiClientPublic("/api/fe/banner/getBannerByType?position=LOCATIONINFO","GET");
+        return ApiClientPublic("banners?position=LOCATIONINFO","GET");
     },
 }
 

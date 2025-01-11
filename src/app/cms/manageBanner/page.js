@@ -147,7 +147,6 @@ export default function Login() {
         fetchBanner().then();
     }, []);
 
-
     return (
         <LayoutPage>
             {contextHolder}

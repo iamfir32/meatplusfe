@@ -29,7 +29,7 @@ img{
 .ant-carousel .slick-dots li button{
     opacity: 0 !important;
 }
-
+.slick-arrow .slick-next:hover,
 .ant-carousel .slick-next:hover,
 .ant-carousel .slick-prev:hover{
     color:var(--yellow) !important;

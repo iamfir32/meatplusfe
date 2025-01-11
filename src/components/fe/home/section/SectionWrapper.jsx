@@ -51,7 +51,6 @@ const SectionWrapper =async () => {
                     <Section key={i} title={section?.title} items={section.items} data={section}></Section>:
                     <SectionSingle key={i} title={section?.title} item={section.items?.length>0?section.items[0]:{}} data={section}></SectionSingle>)}
                 <Introduction></Introduction>
-
             </div>
             <Script
                 src="/scripts/sectionAnimation.js"

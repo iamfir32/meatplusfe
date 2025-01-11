@@ -22,7 +22,11 @@ export default async function fetchDataWithoutAuth(url, method = 'GET', body = n
         }
     }
 
-    const response = await fetch(baseUrl + url+"?origin=meatplussynckiovn.synck.io.vn", options);
+    const separator = url.includes('?') ? '&' : '?';
+    const fullUrl = `${baseUrl}${url}${separator}origin=meatplussynckiovn.synck.io.vn`;
+
+    const response = await fetch(fullUrl, options);
+    console.log(fullUrl);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`);

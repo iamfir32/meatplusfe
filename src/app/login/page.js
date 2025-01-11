@@ -30,9 +30,13 @@ export default function Login() {
                 username:values.username,
                 password:values.password,
             });
-            if (res?.message ) {
+            if (res?.error ) {
                 console.log('res error :::: ',res)
-                openNotificationWithIcon("error","Thông báo",res.message);
+                if(res?.status===401){
+                    openNotificationWithIcon("error","Thông báo","Sai tài khoản/mật khẩu");
+                } else{
+                    openNotificationWithIcon("error","Thông báo","Có lỗi xảy ra thử lại sau");
+                }
                 setPending(false);
             } else {
                 setPending(false);

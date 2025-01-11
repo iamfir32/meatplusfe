@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Slider from "@/components/fe/common/slider/Slider";
 import bannerApi from "@/app/api/fe/bannerApi";
-import {getImageLink} from "@/utils/common";
 async function fetchLocationBanner() {
     try {
-        const banners = await bannerApi.getLocationBanner();
-        return banners?.map((image) => ({
-            id: image?.id,
-            src: getImageLink(image.imageUrl),
-            description: image.description,
+        const res = await bannerApi.getLocationBanner();
+        return res?.data?.banner?.map((image) => ({
+            id: Math.random(),
+            src: image?.imageUrl,
+            description: image?.description,
         }));
     } catch (error) {
         console.error("Failed to fetch promotion banners:", error);
