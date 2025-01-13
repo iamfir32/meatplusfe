@@ -58,10 +58,10 @@ const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,se
     useEffect(() => {
         const fetchPosition = async ()=>{
             const res= await manageBannerApi.getPosition();
-            setPosition(res?.map(position=>({
-                label:position,
-                value:position
-            })))
+            // setPosition(res?.map(position=>({
+            //     label:position,
+            //     value:position
+            // })))
         }
         fetchPosition().then();
     }, []);
