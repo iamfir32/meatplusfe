@@ -2,7 +2,16 @@ import IntroductionImage from "@/assets/images/introduction.jpg"
 import Image from "next/image";
 import classes from "./Introduction.module.css"
 import Location from "@/components/fe/home/section/Location";
-const Introduction = ()=>{
+import WebsiteInfoApi from "@/app/api/fe/websiteInfoApi";
+
+async function fetchDefaultData() {
+    const res = await WebsiteInfoApi.getWebsiteInfo();
+    return res?.data?.setting;
+}
+
+const Introduction =async ()=>{
+    const defaultData = await fetchDefaultData();
+
     return <div className={'w-full flex flex-col gap-[30px]'}>
         <div className={`flex w-full gap-[20px] flex-wrap sm:flex-nowrap homeSection BOTTOM_TO_TOP`}>
             <Image src={IntroductionImage} alt={"introduction image"}

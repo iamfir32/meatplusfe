@@ -5,13 +5,13 @@ import HeaderPage from "@/components/cms/headerPage/HeaderPage";
 import LayoutPage from "@/components/cms/LayoutPage";
 import HeaderAction from "@/components/cms/headerPage/HeaderAction";
 import React, {useEffect, useState} from "react";
-import CreateBannerModal from "@/app/cms/manageBanner/components/CreateBannerModal";
-import manageBannerApi from "@/app/api/cms/manageBannerApi";
+import CreateBannerModal from "@/app/cms/manageNews/components/CreateNewsModal";
+import manageNewsApi from "@/app/api/cms/manageNewsApi";
 import {getImageLink} from "@/utils/common";
 import Image from "next/image";
 import {FaTrash} from "react-icons/fa";
 import {MdEdit} from "react-icons/md";
-import EditBannerModal from "@/app/cms/manageBanner/components/EditBannerModal";
+import EditBannerModal from "@/app/cms/manageNews/components/EditNewsModal";
 
 const breadScrum = [
     {
@@ -54,8 +54,8 @@ export default function Login() {
     const deleteBanner=async (ids)=>{
         try{
             setIsLoading(true)
-            const res = await manageBannerApi.deleteBanner(ids);
-            openNotificationWithIcon("success","Thông báo","Xóa Banner thành công");
+            const res = await manageNewsApi.deleteNews(ids);
+            openNotificationWithIcon("success","Thông báo","Xóa tin tức thành công");
             fetchBanner().then()
         }
         catch (e) {
@@ -76,18 +76,24 @@ export default function Login() {
             },
         },
         {
-            title: 'Banner',
+            title: 'Tiêu đề',
+            dataIndex: 'name',
+            key: 'name'
+        },
+        {
+            title: 'Mô tả ngắn',
+            dataIndex: 'shortDescription',
+            key: 'shortDescription'
+        },
+        {
+            title: 'Thumbnail',
             dataIndex: 'imageUrl',
             key: 'imageUrl',
             width: '6/12',
             render: (imageUrl) => <div className='h-[120px]'>
-                <Image src={getImageLink(imageUrl)} height={1080} width={1920} className={'w-full h-full object-contain'} alt={"banner hero"}></Image>
+                {imageUrl&&<Image src={getImageLink(imageUrl)} height={1080} width={1920}
+                        className={'w-full h-full object-contain'} alt={"banner hero"}></Image>}
             </div>
-        },
-        {
-            title: 'Vị trí',
-            dataIndex: 'position',
-            key: 'position'
         },
         {
             title: '',
@@ -100,24 +106,23 @@ export default function Login() {
                 }}>Sửa</Button>
                 <Popconfirm
                     placement="topLeft"
-                    title={"Bạn có chắc mun xóa Banner này"}
+                    title={"Bạn có chắc muốn xóa tin tức này"}
                     description={"Không thể hoàn tác sau khi xóa"}
                     okText="Xóa"
                     cancelText="Hủy"
-                    onConfirm={()=>deleteBanner([record?.id])}
+                    onConfirm={()=>deleteBanner([record["_id"]])}
                 >
                     <Button icon={<FaTrash />} danger onClick={()=>{}}>Xóa</Button>
                 </Popconfirm>
             </div>,
         },
-
     ]
 
     const headerAction = <HeaderAction>
         <Button type='primary' onClick={()=>{setIsShowCreateModal(true)}}>Thêm mới</Button>
         <Popconfirm
             placement="topLeft"
-            title={"Bạn có chắc mun xóa Banner này"}
+            title={"Bạn có chắc muốn xóa tin tức này"}
             description={"Không thể hoàn tác sau khi xóa"}
             okText="Xóa"
             cancelText="Hủy"
@@ -132,9 +137,9 @@ export default function Login() {
     const fetchBanner =async ()=>{
         try{
             setIsLoading(true);
-            const res=await manageBannerApi.getAllBanner(page);
-            setBanners(res.content);
-            setTotalBanners(res.totalElements);
+            const res=await manageNewsApi.getAllNews(page);
+            setBanners(res.data?.news);
+            setTotalBanners(res.data?.pagination);
         }catch (e) {
             console.log(e);
         }
@@ -160,10 +165,9 @@ export default function Login() {
                 setSelectedBanner(null)
             }} setSelectedBanner={setSelectedBanner}
             ></EditBannerModal>}
-
             <HeaderPage title={"Quản lý tin tức"} breadScrum={breadScrum} action={headerAction}></HeaderPage>
             <Spin spinning={isLoading} className={'mt-[20px]'}>
-                <Table columns={columns} dataSource={banners} rowSelection={rowSelection} rowKey={'id'}></Table>
+                <Table columns={columns} dataSource={banners} rowSelection={rowSelection} rowKey={'_id'}></Table>
             </Spin>
         </LayoutPage>
     );

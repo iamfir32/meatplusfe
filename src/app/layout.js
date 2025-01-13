@@ -2,9 +2,13 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
-import ContactNow from "@/components/layout/ContactNow";
+import ContactNow from "@/components/layout/contactNow/ContactNow";
 import Body from "@/components/layout/Body";
 import Provider from "@/components/Provider";
+import {DefaultDataProvider} from "@/context/DefaultDataContext";
+import WebsiteInfoApi from "@/app/api/fe/websiteInfoApi";
+
+
 
 const geistMyriadPro = localFont({
   src: "../../public/fonts/myriadPro/MyriadPro-BoldCondIt.otf",
@@ -35,21 +39,21 @@ export const metadata = {
   description: "Ra đời từ 2013, Meat Plus – thương hiệu thịt nướng nổi tiếng đến từ Hàn Quốc nay đã có mặt tại hầu khắp các quận nội thành của thủ đô.",
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistRoboto.variable} ${geistMyriadPro.variable} min-h-[100vh] w-full flex flex-col`}
-      >
-          <Provider>
-              <Header/>
-              <Body>
-                  {children}
-              </Body>
-              <Footer/>
-              <ContactNow></ContactNow>
-          </Provider>
-      </body>
-    </html>
-  );
+export default async function RootLayout({ children }) {
+    return (
+        <html lang="en">
+        <body
+            className={`${geistRoboto.variable} ${geistMyriadPro.variable} min-h-[100vh] w-full flex flex-col`}
+        >
+        <Provider>
+            <Header/>
+            <Body>
+                {children}
+            </Body>
+            <Footer/>
+            <ContactNow></ContactNow>
+        </Provider>
+        </body>
+        </html>
+    );
 }

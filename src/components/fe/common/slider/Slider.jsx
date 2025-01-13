@@ -9,7 +9,7 @@ const Slider =({items, options})=>{
     }, []);
     return <>
         {isHydrated && <Carousel arrows infinite={true} draggable {...options}>
-            {items.map((item, i) => (
+            {items?.map((item, i) => (
                 <div key={i} class={`flex justify-center items-center`} style={{display: 'flex !important'}}>
                     {item}
                 </div>))}
