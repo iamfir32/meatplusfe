@@ -133,6 +133,18 @@ body {
 .carousel-lien-he .slick-slide .lien-he-item{
   box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .22);
 }
+
+.arrow-down {
+  position: absolute;
+  bottom: -9px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 9px solid white;
+}
+
 @media (min-width: 1124px) {
 
   .carousel-lien-he .slick-slide{

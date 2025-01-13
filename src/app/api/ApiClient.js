@@ -5,12 +5,12 @@ export default async function fetchData(url, method = 'GET', body = null) {
     const session = await getSession();
     const baseUrl = apiUrl;
 
-    if (!session || !session.user?.token) {
+    if (!session || !session?.user?.data.accessToken) {
         throw new Error('Unauthorized');
     }
 
     const headers = {
-        'Authorization': `Bearer ${session.user.accessToken}`,
+        'Authorization': `Bearer ${session?.user?.data.accessToken}`,
     };
 
     if (body instanceof FormData) {

@@ -4,7 +4,7 @@ import bannerApi from "@/app/api/fe/bannerApi";
 async function fetchLocationBanner() {
     try {
         const res = await bannerApi.getLocationBanner();
-        return res?.data?.banner?.map((image) => ({
+        return res?.data?.banners?.map((image) => ({
             id: Math.random(),
             src: image?.imageUrl,
             description: image?.description,
@@ -17,7 +17,7 @@ async function fetchLocationBanner() {
 const Location =async ()=>{
     const listBanner = await fetchLocationBanner();
 
-    const items = listBanner.map((image) => (
+    const items = listBanner?.map((image) => (
         <Image
             src={image.src}
             alt={image.description}

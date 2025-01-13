@@ -20,11 +20,21 @@
 .carouselItem{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-.text{
-
+.location{
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.location:hover,
+.location.active{
+    background-color: rgb(230, 230, 230);
 }
 
+.point{
+    transition: all .3s ease-in-out;
+}
+.point:hover{
+    color: black;
+}
 @media (max-width: 480px) {
     .carouselItem{
         box-shadow: none;

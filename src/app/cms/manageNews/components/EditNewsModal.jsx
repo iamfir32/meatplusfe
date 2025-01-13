@@ -4,36 +4,45 @@ import React, {useState, useEffect, useRef} from "react";
 import {Modal, Button, Spin, notification} from "antd";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import manageBannerApi from "@/app/api/cms/manageBannerApi";
+import manageNewsApi from "@/app/api/cms/manageNewsApi";
 import ManageImage from "@/components/manageImage/ManageImage";
-import SelectInput from "@/components/formikInput/SelectInput";
 import TextInput from "@/components/formikInput/TextInput";
 import Image from "next/image";
 import {getImageLink} from "@/utils/common";
+import {Editor} from "@tinymce/tinymce-react";
 
-const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,setSelectedBanner }) => {
-    const [position,setPosition] = useState([]);
-    const [isLoading,setIsLoading] = useState(false);
+const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,refresh ,data}) => {
     const [api, contextHolder] = notification.useNotification();
+
+    const [isLoading,setIsLoading] = useState(false);
     const openNotificationWithIcon = (type, title, content) => {
         api[type]({
             message: title,
             description:content,
             placement:'bottomRight'
-
         });
     };
-    const handleOk = async (values) => {
-        editBanner(values).then();
+    const [content, setContent] = useState(data?.content||"");
+
+    const handleEditorChange = (content) => {
+        setContent(content);
     };
 
-    const editBanner = async(values)=>{
+    const handleOk = async (values) => {
+        createBanner(values).then();
+    };
+
+    const createBanner = async(values)=>{
         try{
-            setIsLoading(true);
-            const res=await manageBannerApi.editBanner(values);
-            openNotificationWithIcon("success","Thông báo","Sửa Banner thành công");
-            refresh();
-            handleCancel();
+            if(!content){
+                openNotificationWithIcon("error", "Thông báo", "Vui lòng nhập nội dung");
+            } else{
+                setIsLoading(true);
+                const res=await manageNewsApi.editNews(data["_id"],{...values,content:content});
+                openNotificationWithIcon("success","Thông báo","Thêm tin tức thành công");
+                refresh();
+                handleCancel();
+            }
         }
         catch (e) {
             console.log(e)
@@ -43,52 +52,55 @@ const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,se
     }
     const handleCancel = () => {
         setIsShowCreateModal(false);
-        setSelectedBanner(null)
         if (resetFormRef.current) {
             resetFormRef.current();
         }
     };
 
     const validationSchema = Yup.object().shape({
-        imageUrl: Yup.string().required("Vui lòng chọn ảnh."),
-        position: Yup.string().required("Vui lòng chọn vị trí."),
-        description: Yup.string().optional(),
+        // imageUrl: Yup.string().required("Vui lòng chọn ảnh."),
+        name: Yup.string().required("Vui lòng chọn tiêu đề."),
+        shortDescription: Yup.string().required("Vui lòng điền mô tả ngắn."),
     });
-
-    useEffect(() => {
-        const fetchPosition = async ()=>{
-            const res= await manageBannerApi.getPosition();
-            setPosition(res?.map(position=>({
-                label:position,
-                value:position
-            })))
-        }
-        fetchPosition().then();
-    }, []);
 
     const resetFormRef = useRef(null);
     return (
         <Modal
-            title="Sửa Banner"
+            title="Thêm tin tức"
             open={isShowCreateModal}
             onOk={handleOk}
             onCancel={handleCancel}
             footer={null}
+            width={1170}
         >
             {contextHolder}
             <Spin spinning={isLoading}>
                 <Formik
-                    initialValues={{id:data?.id, imageUrl: data?.imageUrl||"", position:data?.position||"",description:data?.description||""}}
+                    initialValues={{ imageUrl: data?.imageUrl||"", name:data?.name||"",shortDescription:data?.shortDescription||"",}}
                     validationSchema={validationSchema}
                     onSubmit={(values, { resetForm }) => {
-                        handleOk(values).then();
+                        handleOk(values);
                     }}
                 >
                     {({ values,handleSubmit,setFieldValue,errors, touched,resetForm }) => {
                         resetFormRef.current = resetForm;
                         return (<Form>
                                 <div className={'mb-[12px]'}>
-                                    <ManageImage onChooseImage={(image) => {
+                                    <TextInput
+                                        label="Tiêu đề"
+                                        name="name"
+                                        type="text"
+                                        placeholder="Nhập tên menu"
+                                    ></TextInput>
+
+                                    <TextInput
+                                        label="Mô tả ngắn"
+                                        name="shortDescription"
+                                        type="text"
+                                        placeholder="Nhập tên mô tả ngắn"
+                                    ></TextInput>
+
+                                    <ManageImage title={"Chọn hình ảnh thumbnail"} onChooseImage={(image) => {
                                         setFieldValue("imageUrl", image?.name).then();
                                     }}></ManageImage>
 
@@ -98,13 +110,33 @@ const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,se
                                     )}
                                 </div>
 
-                                <SelectInput name={"position"} placeholder={"Chọn vị trí hiển thị"}
-                                             label={"Chọn vị trí hiển thị"} options={position}></SelectInput>
-                                <TextInput
-                                    label="Mô tả"
-                                    name="description"
-                                    type="text"
-                                    placeholder="Nhập mô tả"></TextInput>
+                                {<label className='text-[14px] font-[500] mb-[2px] inline-block'>Nội dung</label>}
+                                <Editor
+                                    apiKey="ko66q0g216w0296ekdu0hu5olo43brk1b3xutehpj0jemv4w"
+                                    init={{
+                                        plugins: [
+                                            "emoticons",
+                                            "image",
+                                            "link",
+                                            "lists",
+                                            "media",
+                                            "table",
+                                            "export",
+                                            "typography",
+                                            'textcolor'
+                                        ],
+                                        toolbar:
+                                            "undo redo | blocks fontfamily fontsize | bold italic underline  forecolor backcolor  | link image media table | align lineheight | checklist numlist bullist indent outdent | emoticons |",
+                                        tinycomments_mode: "embedded",
+                                        tinycomments_author: "Author name",
+                                        file_picker_callback: (callback, value, meta) => {
+                                            setEditorCallback(() => callback);
+                                            setIsShowModalImage(true);
+                                        },
+                                    }}
+                                    initialValue={data?.content||""}
+                                    onEditorChange={handleEditorChange}
+                                />
                                 <div className="mt-4 flex justify-end gap-[10px]">
                                     <Button className="ml-2" onClick={() => {
                                         handleCancel();
@@ -112,7 +144,7 @@ const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,se
                                         Hủy bỏ
                                     </Button>
                                     <Button type="primary" htmlType="submit" onClick={handleSubmit}>
-                                        Lưu
+                                        Thêm
                                     </Button>
                                 </div>
                             </Form>

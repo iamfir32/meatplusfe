@@ -7,8 +7,6 @@ import HeaderAction from "@/components/cms/headerPage/HeaderAction";
 import React, {useEffect, useState} from "react";
 import CreateMenuModal from "@/app/cms/manageMenu/components/CreateMenuModal";
 import manageMenuApi from "@/app/api/cms/manageMenuApi";
-import {getImageLink} from "@/utils/common";
-import Image from "next/image";
 import {FaTrash} from "react-icons/fa";
 import {MdEdit} from "react-icons/md";
 import EditMenuModal from "@/app/cms/manageMenu/components/EditMenuModal";

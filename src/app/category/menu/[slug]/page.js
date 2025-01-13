@@ -8,6 +8,7 @@ import {IoIosArrowForward} from "react-icons/io";
 import TextInputNormal from "@/components/input/TextInputNormal";
 import SelectFieldNormal from "@/components/input/SelectInputNormal";
 import {Button, DatePicker} from "antd";
+import BookingForm from "@/components/fe/common/booking/BookingForm";
 export default async function CMS({params}) {
     const {slug} = params;
     const slugArray = slug.split("-");
@@ -78,17 +79,7 @@ export default async function CMS({params}) {
                 <div className={'w-full flex-1'}>
                     <p className={"text-[30px] text-white text-center mb-[4px] font-[700]"}>ĐẶT BÀN MEAT PLUS</p>
                     <p className={'text-[14px] text-white text-center'}>Vui lòng đặt trước từ 1 đến 3h để được phục vụ tốt nhất</p>
-                    <TextInputNormal placeholder={'Tên của bạn...'}></TextInputNormal>
-                    <TextInputNormal placeholder={'Số điện thoại...'}></TextInputNormal>
-                    <TextInputNormal placeholder={'Email...'}></TextInputNormal>
-                    <SelectFieldNormal placeholder={"Chọn 1 cơ sở"} options={[]}></SelectFieldNormal>
-                    <DatePicker placement={'dd/mm/yyyy'} className={'w-full mb-[12px]'}/>
-                    <SelectFieldNormal placeholder={"Giờ ăn"} options={[]}></SelectFieldNormal>
-                    <TextInputNormal placeholder={'Số người ăn...'}></TextInputNormal>
-
-                    <div className={'flex justify-center'}>
-                        <Button className={"text-black font-[700] bg-[#f9e20a]"}>Đặt bàn</Button>
-                    </div>
+                    <BookingForm></BookingForm>
                 </div>
             </div>
 

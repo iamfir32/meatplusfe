@@ -131,6 +131,7 @@ const CreateMenuModal = ({ setIsShowCreateModal, isShowCreateModal, refresh }) =
                                                height={200}
                                                className={'w-full h-[200px] object-cover mt-[10px]'}></Image>}
                                 </div>
+                                {<label className='text-[14px] font-[500] mb-[2px] inline-block'>Nội dung</label>}
                                 <Editor
                                     apiKey="ko66q0g216w0296ekdu0hu5olo43brk1b3xutehpj0jemv4w"
                                     init={{
