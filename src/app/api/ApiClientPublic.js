@@ -1,4 +1,5 @@
 export default async function fetchDataWithoutAuth(url, method = 'GET', body = null) {
+    return;
     const apiUrl = process.env.NEXT_PUBLIC_API_URL_PUBLIC;
     const baseUrl = apiUrl;
 

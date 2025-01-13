@@ -1,5 +1,5 @@
 import ApiClientPublic from "../ApiClientPublic";
-const ManageBannerApi ={
+const ManageMenuApi ={
     getAll: async ()=>{
         return ApiClientPublic("/api/fe/menu","GET");
     },
@@ -11,4 +11,4 @@ const ManageBannerApi ={
     }
 }
 
-export default ManageBannerApi;
+export default ManageMenuApi;
