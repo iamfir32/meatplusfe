@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-export { default } from "next-auth/middleware";
-export function middleware(request) {
+// export { default } from "next-auth/middleware";
+export default function middleware(request) {
     const headers = new Headers(request.headers);
     headers.set("x-current-path", request.nextUrl.pathname);
 
