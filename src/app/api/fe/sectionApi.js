@@ -1,7 +1,7 @@
 import ApiClientPublic from "../ApiClientPublic";
 const SectionApi ={
     getAll: async ()=>{
-        return ApiClientPublic("/api/fe/section/getAllSection","GET");
+        return ApiClientPublic("/sections","GET");
     }
 }
 

@@ -15,7 +15,7 @@ import EditBannerModal from "@/app/cms/manageBanner/components/EditBannerModal";
 
 const breadScrum = [
     {
-        title:'Quản lý hệ thống'
+        title:'Quản lý trang chủ'
     },
     {
         title:'Quản lý Banner'
@@ -39,22 +39,22 @@ export default function Login() {
     const [isLoading,setIsLoading] = useState(false)
     const [banners,setBanners] = useState([]);
     const [totalBanners,setTotalBanners]=useState(0)
-    const [page,setPage]=useState(0);
+    const [page,setPage]=useState(1);
 
     const [selectedBanner,setSelectedBanner] = useState()
-    const onSelectChange = (newSelectedRowKeys) => {
-        setSelectedRowKeys(newSelectedRowKeys);
-    };
-    const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+    // const onSelectChange = (newSelectedRowKeys) => {
+    //     setSelectedRowKeys(newSelectedRowKeys);
+    // };
+    // const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const rowSelection = {
-        selectedRowKeys,
-        onChange: onSelectChange,
+        // selectedRowKeys,
+        // onChange: onSelectChange,
     };
 
     const deleteBanner=async (ids)=>{
         try{
             setIsLoading(true)
-            const res = await manageBannerApi.deleteBanner(ids);
+            const res = await manageBannerApi.deleteBanner(id);
             openNotificationWithIcon("success","Thông báo","Xóa Banner thành công");
             fetchBanner().then()
         }
@@ -72,7 +72,7 @@ export default function Login() {
             align: "center",
             width: "50px",
             render: (text, record, index) => {
-                return page * pageSize+ index + 1;
+                return page * (index + 1);
             },
         },
         {
@@ -83,6 +83,12 @@ export default function Login() {
             render: (imageUrl) => <div className='h-[120px]'>
                 <Image src={getImageLink(imageUrl)} height={1080} width={1920} className={'w-full h-full object-contain'} alt={"banner hero"}></Image>
             </div>
+        },
+        {
+            title: 'Mô tả',
+            dataIndex: 'description',
+            key: 'description',
+            width: '3/12',
         },
         {
             title: 'Vị trí',
@@ -115,7 +121,7 @@ export default function Login() {
 
     const headerAction = <HeaderAction>
         <Button type='primary' onClick={()=>{setIsShowCreateModal(true)}}>Thêm mới</Button>
-        <Popconfirm
+        {/* <Popconfirm
             placement="topLeft"
             title={"Bạn có chắc mun xóa Banner này"}
             description={"Không thể hoàn tác sau khi xóa"}
@@ -127,14 +133,16 @@ export default function Login() {
             }}
         >
             <Button color="danger" variant="solid" >Xóa</Button>
-        </Popconfirm>
+        </Popconfirm> */}
     </HeaderAction>
     const fetchBanner =async ()=>{
         try{
             setIsLoading(true);
-            const res=await manageBannerApi.getAllBanner(page);
-            setBanners(res.content);
-            setTotalBanners(res.totalElements);
+            const { data: { banners: _banners, total } } = await manageBannerApi.getAllBanner(page, pageSize);
+            setBanners(_banners);
+            setTotalBanners(total || 0);
+
+            console.log(banners)
         }catch (e) {
             console.log(e);
         }
@@ -146,7 +154,6 @@ export default function Login() {
     useEffect(() => {
         fetchBanner().then();
     }, []);
-
 
     return (
         <LayoutPage>
@@ -163,7 +170,7 @@ export default function Login() {
 
             <HeaderPage title={"Quản lý Banner"} breadScrum={breadScrum} action={headerAction}></HeaderPage>
             <Spin spinning={isLoading} className={'mt-[20px]'}>
-                <Table columns={columns} dataSource={banners} rowSelection={rowSelection} rowKey={'id'}></Table>
+                <Table columns={columns} dataSource={banners} rowKey={'id'}></Table>
             </Spin>
         </LayoutPage>
     );

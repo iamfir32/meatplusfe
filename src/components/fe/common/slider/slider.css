@@ -5,7 +5,6 @@
 img{
     width: 100%;
 }
-
 .ant-carousel .slick-dots li{
     width: 6px;
     height: 6px;
@@ -14,6 +13,7 @@ img{
     border:3px solid var(--primary);
     opacity: .5;
 }
+
 .ant-carousel .slick-dots li.slick-active{
     width: 7px;
     height: 7px;
@@ -29,7 +29,7 @@ img{
 .ant-carousel .slick-dots li button{
     opacity: 0 !important;
 }
-
+.slick-arrow .slick-next:hover,
 .ant-carousel .slick-next:hover,
 .ant-carousel .slick-prev:hover{
     color:var(--yellow) !important;

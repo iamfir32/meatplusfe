@@ -16,7 +16,7 @@ export const authOptions = {
                 };
 
                 try {
-                    const res = await fetch(process.env.NEXT_PUBLIC_API_URL+"/auth/login", {
+                    const res = await fetch("https://api.synck.io.vn/api/a/sessions/login", {
                         method: 'POST',
                         body: JSON.stringify(data),
                         headers: {

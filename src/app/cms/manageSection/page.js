@@ -13,7 +13,7 @@ import EditSectionModal from "@/app/cms/manageSection/components/EditSectionModa
 
 const breadScrum = [
     {
-        title:'Quản lý hệ thống'
+        title:'Quản lý trang chủ'
     },
     {
         title:'Quản lý Section'

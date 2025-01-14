@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db82c08d-725a-4f1f-b0ca-0c7002a3288d" name="Changes" comment="update" />
+    <list default="true" id="db82c08d-725a-4f1f-b0ca-0c7002a3288d" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/ApiClientPublic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/ApiClientPublic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lien-he/Maps.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lien-he/Maps.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/heroBanner/HeroBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/heroBanner/HeroBanner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/meetPromo/MeatPromotion.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/meetPromo/MeatPromotion.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/Section.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fe/home/section/SectionWrapper.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +26,8 @@
       <list>
         <option value="TypeScript File" />
         <option value="CSS File" />
-        <option value="JSX File" />
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -29,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="staging" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,14 +68,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Node.js.Dropdown.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.HeroBanner.jsx.executor&quot;: &quot;Run&quot;,
     &quot;Node.js.Social.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.page.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;staging&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lautom/Documents/Freelance/MPv2/meatplusfe/src/app/api/fe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lautom/Documents/Freelance/MPv2/meatplusfe/src/app/cms/managePromotion&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -81,17 +92,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\cms\managePromotion" />
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\api\fe" />
-      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\api" />
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\api\cms" />
-      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components" />
-      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\cms\manageSection" />
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\app\cms\manageLocation" />
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\layout\contactNow" />
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\layout\footer\components" />
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\layout\footer" />
+      <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\layout\header\components" />
       <recent name="C:\Users\Lautom\Documents\Freelance\MPv2\meatplusfe\src\components\fe\home\social" />
-      <recent name="C:\Users\LongNT6\Documents\meatplusfe\src\components\formikInput\style" />
-      <recent name="C:\Users\LongNT6\Documents\meatplusfe\src\app" />
-      <recent name="C:\Users\Lautom\Documents\Freelance\MeetPlus\fe\src\components\layout\header" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,7 +121,22 @@
       <workItem from="1733966315190" duration="434000" />
       <workItem from="1735826130841" duration="1770000" />
       <workItem from="1735830507607" duration="8775000" />
-      <workItem from="1735909388276" duration="60655000" />
+      <workItem from="1735909388276" duration="59958000" />
+      <workItem from="1736091048734" duration="38949000" />
+      <workItem from="1736526084167" duration="10394000" />
+      <workItem from="1736575268774" duration="501000" />
+      <workItem from="1736585545121" duration="8209000" />
+      <workItem from="1736624108452" duration="113000" />
+      <workItem from="1736648023357" duration="5206000" />
+      <workItem from="1736676954506" duration="126000" />
+      <workItem from="1736732515644" duration="5648000" />
+      <workItem from="1736743996345" duration="705000" />
+      <workItem from="1736756217718" duration="458000" />
+      <workItem from="1736756714326" duration="1886000" />
+      <workItem from="1736762194332" duration="498000" />
+      <workItem from="1736762714233" duration="947000" />
+      <workItem from="1736767812490" duration="17357000" />
+      <workItem from="1736811701493" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -145,109 +172,53 @@
     </task>
     <task id="LOCAL-00005" summary="update">
       <option name="closed" value="true" />
-      <created>1736018294522</created>
+      <created>1736045994189</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1736018294522</updated>
+      <updated>1736045994189</updated>
     </task>
     <task id="LOCAL-00006" summary="update">
       <option name="closed" value="true" />
-      <created>1736018307873</created>
+      <created>1736351153341</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1736018307873</updated>
+      <updated>1736351153341</updated>
     </task>
     <task id="LOCAL-00007" summary="update">
       <option name="closed" value="true" />
-      <created>1736018322104</created>
+      <created>1736595894198</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1736018322104</updated>
+      <updated>1736595894198</updated>
     </task>
     <task id="LOCAL-00008" summary="update">
       <option name="closed" value="true" />
-      <created>1736018352065</created>
+      <created>1736789475237</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1736018352065</updated>
+      <updated>1736789475237</updated>
     </task>
     <task id="LOCAL-00009" summary="update">
       <option name="closed" value="true" />
-      <created>1736018365484</created>
+      <created>1736789493111</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1736018365484</updated>
+      <updated>1736789493112</updated>
     </task>
     <task id="LOCAL-00010" summary="update">
       <option name="closed" value="true" />
-      <created>1736018376629</created>
+      <created>1736811734711</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1736018376629</updated>
+      <updated>1736811734711</updated>
     </task>
-    <task id="LOCAL-00011" summary="update">
-      <option name="closed" value="true" />
-      <created>1736018389526</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1736018389526</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <option name="closed" value="true" />
-      <created>1736018400715</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1736018400715</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update">
-      <option name="closed" value="true" />
-      <created>1736018412274</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1736018412274</updated>
-    </task>
-    <task id="LOCAL-00014" summary="update">
-      <option name="closed" value="true" />
-      <created>1736018585074</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1736018585074</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <option name="closed" value="true" />
-      <created>1736019761946</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1736019761946</updated>
-    </task>
-    <task id="LOCAL-00016" summary="update">
-      <option name="closed" value="true" />
-      <created>1736020049295</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1736020049295</updated>
-    </task>
-    <task id="LOCAL-00017" summary="update">
-      <option name="closed" value="true" />
-      <created>1736047127137</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1736047127137</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

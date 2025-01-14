@@ -26,7 +26,6 @@ const Header =async ()=>{
 
                     <div className={'flex gap-[30px] items-center'}>
                         <Booking></Booking>
-
                         <MenuDrawer></MenuDrawer>
                     </div>
                 </div>

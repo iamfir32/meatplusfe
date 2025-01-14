@@ -36,7 +36,6 @@ const SectionWrapper =async () => {
             sections.forEach((section) => observer.observe(section));
         });
     }
-
     return (
         <div
             className={classes.container}
@@ -47,11 +46,10 @@ const SectionWrapper =async () => {
             }}
         >
             <div className={'max-w-[1170px] w-full flex flex-col justify-center items-center gap-[85px]'}>
-                {data?.map((section,i)=>section?.type==="MULTIPLE"?
-                    <Section key={i} title={section?.title} items={section.items} data={section}></Section>:
-                    <SectionSingle key={i} title={section?.title} item={section.items?.length>0?section.items[0]:{}} data={section}></SectionSingle>)}
+                {data?.data?.retreasts?.map((section,i)=>section?.type==="MULTIPLE"?
+                    <Section key={i} title={section?.title} items={section.options} data={section}></Section>:
+                    <SectionSingle key={i} title={section?.title} item={section.options?.length>0?section.options[0]:{}} data={section}></SectionSingle>)}
                 <Introduction></Introduction>
-
             </div>
             <Script
                 src="/scripts/sectionAnimation.js"

@@ -152,7 +152,7 @@ const CreateSectionModal = ({ setIsShowCreateModal, isShowCreateModal,refresh })
                 </Formik>
             </Spin>
 
-            <Modal  title="Thêm nội dung"
+            <Modal title="Thêm nội dung"
                     open={isOpenAddItemModal}
                     onOk={()=>{
                         if(tempItem?.imageUrl) {

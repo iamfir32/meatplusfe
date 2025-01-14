@@ -12,11 +12,11 @@ import classes from "./MeetPromotion.module.css";
 
 async function fetchPromotionBanner() {
     try {
-        const banners = await bannerApi.getPromotionBanner();
-        return banners?.map((image) => ({
-            id: image?.id,
-            src: getImageLink(image.imageUrl),
-            description: image.description,
+        const res = await bannerApi.getPromotionBanner();
+        return res?.data?.banners?.map((image) => ({
+            id: Math.random(),
+            src: image?.imageUrl,
+            description: image?.description,
         }));
     } catch (error) {
         console.error("Failed to fetch promotion banners:", error);
@@ -27,7 +27,7 @@ async function fetchPromotionBanner() {
 export default async function MeatPromotion() {
     const listBanner = await fetchPromotionBanner();
 
-    const items = listBanner.map((image) => (
+    const items = listBanner?.map((image) => (
         <Image
             src={image.src}
             alt={image.description}

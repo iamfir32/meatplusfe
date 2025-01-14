@@ -1,19 +1,20 @@
 import ApiClient from "../ApiClient";
+
 const ManageBannerApi ={
-    getPosition: async ()=>{
-        return ApiClient("/cms/manageBanner/getPosition","GET");
+    getPosition: async (position, page, limit)=>{
+        return ApiClient(`banners/?page=${page}&limit=${limit}&position=${position}`,"GET");
     },
     createBanner: async (data)=>{
-        return ApiClient("/cms/manageBanner","POST",data);
+        return ApiClient("banners","POST", data);
     },
     editBanner: async (data)=>{
-        return ApiClient("/cms/manageBanner","PUT",data);
+        return ApiClient("banners","PATCH", data);
     },
-    getAllBanner: async (page)=>{
-        return ApiClient("/cms/manageBanner?page="+page,"GET");
+    getAllBanner: async (page, limit)=>{
+        return ApiClient(`banners?page=${page}&limit=${limit}`,"GET");
     },
     deleteBanner: async (data)=>{
-        return ApiClient("/cms/manageBanner/delete","POST",data);
+        return ApiClient("banners/delete","POST", data);
     },
 }
 

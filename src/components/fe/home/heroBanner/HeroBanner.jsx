@@ -4,11 +4,11 @@ import bannerApi from "@/app/api/fe/bannerApi";
 import Image from "next/image"
 async function fetchBannerData() {
     try {
-        const banners = await bannerApi.getHeroBanner();
-        return banners?.map((image) => ({
-            id: image?.id,
-            src: getImageLink(image.imageUrl),
-            description: image.description,
+        const res = await bannerApi.getHeroBanner();
+        return res?.data?.banners?.map((image) => ({
+            id: Math.random(),
+            src: image?.imageUrl,
+            description: image?.description,
         }));
     } catch (error) {
         console.error("Failed to fetch banners:", error);
@@ -18,7 +18,7 @@ async function fetchBannerData() {
 
 export default async function HeroBanner() {
     const listBanner = await fetchBannerData();
-    const items = listBanner.map((image) => (
+    const items = listBanner?.map((image) => (
         <Image
             src={image.src}
             alt={image.description}

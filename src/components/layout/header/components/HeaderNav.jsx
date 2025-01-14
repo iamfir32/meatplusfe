@@ -1,5 +1,7 @@
 import Link from "next/link";
 import NavLink from "@/components/layout/header/components/NavLink";
+import MenuDropdown from "@/components/layout/header/components/MenuDropdown";
+import PromotionDropdown from "@/components/layout/header/components/PromotionDropdown";
 
 const navList =[
     {
@@ -9,12 +11,12 @@ const navList =[
     {
         title:"MENU",
         link:'#',
-        dropdown:<></>
+        dropdown:<MenuDropdown></MenuDropdown>
     },
     {
         title:"KHUYẾN MÃI",
         link:'/category/khuyen-mai',
-        dropdown: <></>
+        dropdown: <PromotionDropdown></PromotionDropdown>
     },
     {
         title:"TIN TỨC",
