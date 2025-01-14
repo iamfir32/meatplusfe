@@ -36,6 +36,7 @@ const SectionWrapper =async () => {
             sections.forEach((section) => observer.observe(section));
         });
     }
+    console.log(data?.data?.retreasts)
     return (
         <div
             className={classes.container}

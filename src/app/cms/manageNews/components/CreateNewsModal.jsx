@@ -56,6 +56,7 @@ const CreateNewsModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) =>
     }
     const handleCancel = () => {
         setIsShowCreateModal(false);
+        setContent("")
         if (resetFormRef.current) {
             resetFormRef.current();
         }
@@ -139,6 +140,7 @@ const CreateNewsModal = ({ setIsShowCreateModal, isShowCreateModal,refresh }) =>
                                         },
                                     }}
                                     initialValue=""
+                                    value={content}
                                     onEditorChange={handleEditorChange}
                                 />
                                 <div className="mt-4 flex justify-end gap-[10px]">

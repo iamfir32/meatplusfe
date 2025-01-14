@@ -30,12 +30,12 @@ const ManageImage =({onChooseImage,isModalOpen,setIsModalOpen})=>{
     const fetchAllFiles = async ()=>{
         try{
             setIsLoading(true);
-            const res =await fileApi.getAll(page,50);
-            setFiles(res?.content);
-            setTotalFiles(res?.totalElements)
+            const res =await fileApi.getAll(page);
+            setFiles(res?.data?.files);
+            setTotalFiles(res?.data?.pagination?.total)
         }
         catch (e){
-
+            console.log(e)
         }finally {
             setIsLoading(false)
         }

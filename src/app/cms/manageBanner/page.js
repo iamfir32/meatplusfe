@@ -121,9 +121,9 @@ export default function Login() {
 
     const headerAction = <HeaderAction>
         <Button type='primary' onClick={()=>{setIsShowCreateModal(true)}}>Thêm mới</Button>
-        {/* <Popconfirm
+         <Popconfirm
             placement="topLeft"
-            title={"Bạn có chắc mun xóa Banner này"}
+            title={"Bạn có chắc muốn xóa Banner này"}
             description={"Không thể hoàn tác sau khi xóa"}
             okText="Xóa"
             cancelText="Hủy"
@@ -133,7 +133,7 @@ export default function Login() {
             }}
         >
             <Button color="danger" variant="solid" >Xóa</Button>
-        </Popconfirm> */}
+        </Popconfirm>
     </HeaderAction>
     const fetchBanner =async ()=>{
         try{
@@ -142,7 +142,6 @@ export default function Login() {
             setBanners(_banners);
             setTotalBanners(total || 0);
 
-            console.log(banners)
         }catch (e) {
             console.log(e);
         }

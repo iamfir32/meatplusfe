@@ -24,7 +24,6 @@ export default async function fetchDataWithoutAuth(url, method = 'GET', body = n
 
     const separator = url.includes('?') ? '&' : '?';
     const fullUrl = `${baseUrl}${url}${separator}origin=meatplussynckiovn.synck.io.vn`;
-
     const response = await fetch(fullUrl, options);
 
     if (!response.ok) {

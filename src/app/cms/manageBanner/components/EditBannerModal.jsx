@@ -12,7 +12,6 @@ import Image from "next/image";
 import {getImageLink} from "@/utils/common";
 
 const EditBannerModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,setSelectedBanner }) => {
-    const [position,setPosition] = useState([]);
     const [isLoading,setIsLoading] = useState(false);
     const [api, contextHolder] = notification.useNotification();
     const openNotificationWithIcon = (type, title, content) => {
@@ -55,17 +54,6 @@ const EditBannerModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,
         description: Yup.string().optional(),
     });
 
-    useEffect(() => {
-        const fetchPosition = async ()=>{
-            const res= await manageBannerApi.getPosition();
-            // setPosition(res?.map(position=>({
-            //     label:position,
-            //     value:position
-            // })))
-        }
-        fetchPosition().then();
-    }, []);
-
     const resetFormRef = useRef(null);
     return (
         <Modal
@@ -99,7 +87,15 @@ const EditBannerModal = ({ setIsShowCreateModal, isShowCreateModal,data,refresh,
                                 </div>
 
                                 <SelectInput name={"position"} placeholder={"Chọn vị trí hiển thị"}
-                                             label={"Chọn vị trí hiển thị"} options={position}></SelectInput>
+                                             label={"Chọn vị trí hiển thị"} options={[{
+                                    lable:"HEROBANNER",value:"HEROBANNER"
+                                },
+                                    {
+                                        lable:"PRODUCTSHOWCASE",value:"PRODUCTSHOWCASE"
+                                    },
+                                    {
+                                        lable:"LOCATIONINFO",value:"LOCATIONINFO"
+                                    }]}></SelectInput>
                                 <TextInput
                                     label="Mô tả"
                                     name="description"

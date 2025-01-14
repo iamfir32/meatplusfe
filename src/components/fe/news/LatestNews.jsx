@@ -6,15 +6,15 @@ import classes from "./LayoutNews.module.css";
 
 const LatestNews  =()=>{
     const items=[{
-        imageUrl:getImageLink("anhthit3.jpg"),
+        imageUrl:"https://api.synck.io.vn/proxy/files/20250114131653_z6099173969716_2f70d40bb532dbdc9e6bae5d51fcc9dd.jpg?alt=media&token=c7314c06-1272-477b-8bb1-7d64b30d8586",
         title:"MEAT PLUS LONG BIÊN: SIÊU KHUYẾN MÃI LỚN NHẤT NĂM 2021"
     },
         {
-            imageUrl:getImageLink("anhthit3.jpg"),
+            imageUrl:"https://api.synck.io.vn/proxy/files/20250114131653_z6099173969716_2f70d40bb532dbdc9e6bae5d51fcc9dd.jpg?alt=media&token=c7314c06-1272-477b-8bb1-7d64b30d8586",
             title:"MEAT PLUS LONG BIÊN: SIÊU KHUYẾN MÃI LỚN NHẤT NĂM 2021"
         },
         {
-            imageUrl:getImageLink("anhthit3.jpg"),
+            imageUrl:"https://api.synck.io.vn/proxy/files/20250114131653_z6099173969716_2f70d40bb532dbdc9e6bae5d51fcc9dd.jpg?alt=media&token=c7314c06-1272-477b-8bb1-7d64b30d8586",
             title:"MEAT PLUS LONG BIÊN: SIÊU KHUYẾN MÃI LỚN NHẤT NĂM 2021"
         }]
 
