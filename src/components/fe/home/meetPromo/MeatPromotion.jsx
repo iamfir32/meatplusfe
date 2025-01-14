@@ -27,7 +27,7 @@ async function fetchPromotionBanner() {
 export default async function MeatPromotion() {
     const listBanner = await fetchPromotionBanner();
 
-    const items = listBanner.map((image) => (
+    const items = listBanner?.map((image) => (
         <Image
             src={image.src}
             alt={image.description}

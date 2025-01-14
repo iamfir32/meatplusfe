@@ -8,8 +8,8 @@ const Section = ({title,items,data})=>{
         <p className={'promo-title'}>{title}</p>
         <div className={classes.section}>
             {items?.map((item,i)=>(item?.link?<Link className={`${classes.sectionItem} ${classes.multiple}`} key={i} href={item?.link}>
-                <Image key={i} src={getImageLink(item?.imageUrl)} alt={"menu"} width={1920} height={1080} objectFit={'cover'}></Image>
-            </Link>:<Image className={`${classes.sectionItem} ${classes.multiple}`} key={i} src={getImageLink(item?.imageUrl)} alt={"menu"} width={1920} height={1080} objectFit={'cover'}></Image>))}
+                <Image key={i} src={item?.imageUrl} alt={"menu"} width={1920} height={1080} objectFit={'cover'}></Image>
+            </Link>:<Image className={`${classes.sectionItem} ${classes.multiple}`} key={i} src={item?.imageUrl} alt={"menu"} width={1920} height={1080} objectFit={'cover'}></Image>))}
         </div>
     </div>
 }

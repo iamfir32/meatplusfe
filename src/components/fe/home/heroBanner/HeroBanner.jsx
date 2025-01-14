@@ -18,7 +18,7 @@ async function fetchBannerData() {
 
 export default async function HeroBanner() {
     const listBanner = await fetchBannerData();
-    const items = listBanner.map((image) => (
+    const items = listBanner?.map((image) => (
         <Image
             src={image.src}
             alt={image.description}

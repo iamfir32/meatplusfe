@@ -85,7 +85,7 @@ const Maps= ()=>{
                     </div>))}
                 </div>
             </div>
-            <div>
+            <div className={'h-[400px] w-[500px]'}>
                 <MFMap
                     options={{
                         center: {lat: 16.072163491469226, lng: 108.22690536081757},
