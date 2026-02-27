@@ -7,7 +7,7 @@ import fileApi from "@/app/api/cms/file/fileApi";
 import ImageItem from "@/components/manageImage/ImageItem";
 import classes from "./ManageImage.module.css"
 import {getSession} from "next-auth/react";
-import fetchData from "@/app/api/ApiClient";
+import upload from "@/app/api/uploads";
 import {FaTrash} from "react-icons/fa";
 import Image from "next/image";
 const ManageImage =({onChooseImage,isModalOpen,setIsModalOpen})=>{
@@ -44,7 +44,7 @@ const ManageImage =({onChooseImage,isModalOpen,setIsModalOpen})=>{
         try{
             if(selectedImage && selectedImage?.id){
                 setIsLoading(true);
-                const res =await fileApi.delete(selectedImage?.id);
+                await fileApi.delete(selectedImage?.id);
                 openNotificationWithIcon("success","Thông báo","Xóa ảnh thành công");
                 fetchAllFiles().then();
                 setSelectedImage(null)
@@ -71,7 +71,7 @@ const ManageImage =({onChooseImage,isModalOpen,setIsModalOpen})=>{
 
     const customRequest = async ({ file, onSuccess, onError }) => {
         const session = await getSession();
-        if (!session || !session.user?.token) {
+        if (!session || !session.user?.data?.accessToken) {
             onError(new Error('Unauthorized'));
             return;
         }
@@ -80,8 +80,9 @@ const ManageImage =({onChooseImage,isModalOpen,setIsModalOpen})=>{
         formData.append('file', file);
 
         try {
+            console.log("Uploading file:", file);
             setIsLoading(true)
-            const response = await fetchData('/api/files/upload', 'POST', formData, session.user.token);
+            const response = await upload('/verified', 'POST', formData, session.user?.data?.accessToken);
             onSuccess(response);
             openNotificationWithIcon("success","Thông báo","Tải lên ảnh thành công");
             fetchAllFiles().then();

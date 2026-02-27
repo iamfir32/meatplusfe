@@ -7,7 +7,7 @@ const ManageNewsApi ={
         return ApiClient("/news","POST",data);
     },
     editNews: async (id,data)=>{
-        return ApiClient("/news/"+id,"PATCH",data);
+        return ApiClient("news/"+id,"PATCH",data);
     },
     deleteNews: async (data)=>{
         return ApiClient("/news/"+data,"DELETE");

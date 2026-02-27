@@ -101,7 +101,7 @@ const EditNewsModal = ({ setIsShowCreateModal, isShowCreateModal,refresh ,data})
                                     ></TextInput>
 
                                     <ManageImage title={"Chọn hình ảnh thumbnail"} onChooseImage={(image) => {
-                                        setFieldValue("imageUrl", image?.name).then();
+                                        setFieldValue("imageUrl", image?.source).then();
                                     }}></ManageImage>
 
                                     {values?.imageUrl && <Image src={getImageLink(values?.imageUrl)} alt={"banner"} width={1920} height={120 } className={'w-full h-[120px] object-cover mt-[10px]'}></Image>}
